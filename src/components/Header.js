@@ -1,23 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
-import { startLogout } from '../actions/auth';
 
-export const Header = ({ startLogout }) => (
+export const Header = () => (
   <header className="header">
     <div className="content-container">
       <div className="header__content">
-        <Link className="header__title" to="/dashboard">
-          <h1>Boilerplate</h1>
-        </Link>
-        <button className="button button--link" onClick={startLogout}>Logout</button>
+        <Link className="header__title" to="/">
+          <h1>CryptoDeals</h1>
+        </Link>        
+        <input type="text" placeholder="Find deals" />
+        <select>
+          <option>Melbourne</option>
+          <option>Sydney</option>
+          <option>Brisbane</option>
+        </select>  
       </div>
     </div>
   </header>
 );
 
-const mapDispatchToProps = (dispatch) => ({
-  startLogout: () => dispatch(startLogout())
-});
 
-export default connect(undefined, mapDispatchToProps)(Header);
+export default Header;

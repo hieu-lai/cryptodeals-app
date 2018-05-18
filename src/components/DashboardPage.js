@@ -1,8 +1,11 @@
 import React from 'react';
+import DashboardPageHeader from './DashboardPageHeader';
+import RestaurantsList from './RestaurantsList';
 
 const DashboardPage = () => (
   <div>
-    Dashboard page content
+    <DashboardPageHeader />
+    <RestaurantsList />
   </div>
 );
 
