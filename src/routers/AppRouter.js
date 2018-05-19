@@ -10,6 +10,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import AboutUsPage from '../components/AboutUsPage';
 import TermsAndConditionsPage from '../components/TermsAndConditionsPage';
+import PrivacyPolicyPage from '../components/PrivacyPolicyPage';
+import RestaurantPage from '../components/RestaurantPage';
 
 
 export const history = createHistory();
@@ -22,6 +24,8 @@ const AppRouter = () => (
         <PublicRoute path="/" component={DashboardPage} exact={true} />
         <PublicRoute path="/about-cryptodeals" component={AboutUsPage} />
         <PublicRoute path="/terms-and-conditions" component={TermsAndConditionsPage} />
+        <PublicRoute path="/privacy-policy" component={PrivacyPolicyPage} />
+        <PublicRoute path="/deal/:id" component={RestaurantPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />

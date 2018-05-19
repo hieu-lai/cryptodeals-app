@@ -15,8 +15,8 @@ const Footer = () => (
       <h4>Help & Support</h4>
       <ul>
         <li>Contact Us</li>
-        <Link to="/terms-and-conditions"><li>Terms & Conditions</li></Link>
-        <li>Privacy Policy</li>
+        <Link to="/terms-and-conditions" target="_blank"><li>Terms & Conditions</li></Link>
+        <Link to='/privacy-policy' target="_blank"><li>Privacy Policy</li></Link>
       </ul> 
     </div>
     <div>
