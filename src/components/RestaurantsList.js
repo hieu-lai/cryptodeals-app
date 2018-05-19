@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import RestaurantListItem from './RestaurantListItem';
+import selectRestaurants from '../selectors/restaurants';
 
 const RestaurantsList = (props) => (
   <div>
@@ -14,7 +15,7 @@ const RestaurantsList = (props) => (
 
 
 const mapStateToProps = (state) => ({
-  restaurants: state.restaurants
+  restaurants: selectRestaurants(state.restaurants, state.filters)
 });
 
 export default connect(mapStateToProps)(RestaurantsList);

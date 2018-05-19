@@ -12,7 +12,6 @@ const RestaurantListItem = ({ id, name, discount, cryptocurrencies, location, ta
       otherCoins.push(key);
     }
   }
-  
   return (
     <div>
       <Link to={`/deal/${id}`}>
