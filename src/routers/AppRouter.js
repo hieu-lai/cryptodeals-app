@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 import AboutUsPage from '../components/AboutUsPage';
 import TermsAndConditionsPage from '../components/TermsAndConditionsPage';
 import PrivacyPolicyPage from '../components/PrivacyPolicyPage';
-import RestaurantPage from '../components/RestaurantPage';
+import DealPage from '../components/DealPage';
 
 
 export const history = createHistory();
@@ -25,7 +25,7 @@ const AppRouter = () => (
         <PublicRoute path="/about-cryptodeals" component={AboutUsPage} />
         <PublicRoute path="/terms-and-conditions" component={TermsAndConditionsPage} />
         <PublicRoute path="/privacy-policy" component={PrivacyPolicyPage} />
-        <PublicRoute path="/deal/:id" component={RestaurantPage} />
+        <PublicRoute path="/deal/:id" component={DealPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />

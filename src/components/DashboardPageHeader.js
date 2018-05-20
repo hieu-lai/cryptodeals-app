@@ -22,7 +22,7 @@ const DashboardPageHeader = (props) => {
       >
         <option value="discount">Discount %</option>
         <option value="recommendation">Recommended</option>
-        <option value="date">Newest Deals</option>      
+        <option value="date">Newest Deals</option>
       </select>  
     </div>
   )
