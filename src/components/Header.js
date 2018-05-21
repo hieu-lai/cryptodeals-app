@@ -5,6 +5,7 @@ import { sortByCity, setTextFilter } from '../actions/filters';
 
 class Header extends React.Component {
   state = {
+    text: '',
     sortByCity: ''
   };
 
@@ -12,24 +13,33 @@ class Header extends React.Component {
     const city = e.target.value;
     this.setState(() => ({ sortByCity: city }));
     this.props.sortByCity(city);
-    console.log(this.props.filters);
-    console.log(this.state);
   };
   handleInputQuery = (e) => {
-    //e.preventDefault();
-    const query = e.target.elements.query.value;
-    this.props.setTextFilter(query);
-    //this.props.history.push('/');
+    e.preventDefault();
+    window.location.assign('/');
+    const text = e.target.elements.query.value;
+    this.setState(() => ({ text }));
+    
     e.target.elements.query.value = '';
-    console.log(this.props.filters);
+  };
+  handleClearSessionStorage = () => {
+    sessionStorage.clear();
+    window.location.assign('/');
   };
 
   componentDidMount() {
     try {
-      const json = localStorage.getItem('sortByCity');
-      const sortByCity = JSON.parse(json);
-      if(sortByCity) {
-        this.setState(() => ({ sortByCity }));
+      const json1 = localStorage.getItem('sortByCity');
+      const json2 = sessionStorage.getItem('text');
+      const city = JSON.parse(json1);
+      const text = JSON.parse(json2);
+      if(city) {
+        this.setState(() => ({ sortByCity: city }));
+        this.props.sortByCity(city);
+      }
+      if (text) {
+        this.setState(() => ({ text }));
+        this.props.setTextFilter(text);
       }
     } catch(e) {
       // Do nothing
@@ -38,8 +48,12 @@ class Header extends React.Component {
 
   componentDidUpdate(prevProps, prevState) {
     if(prevState.sortByCity !== this.state.sortByCity) {
-      const json = JSON.stringify(this.state.sortByCity);
-      localStorage.setItem('sortByCity', json);
+      const json1 = JSON.stringify(this.state.sortByCity);
+      localStorage.setItem('sortByCity', json1);
+    }
+    if(prevState.text !== this.state.text) {
+      const json2 = JSON.stringify(this.state.text);
+      sessionStorage.setItem('text', json2);
     }
   };
   
@@ -48,9 +62,10 @@ class Header extends React.Component {
       <header className="header">
         <div className="content-container">
           <div className="header__content">
-            <Link className="header__title" to="/">
+            
+            <div className="header__title" onClick={this.handleClearSessionStorage}>
               <h1>CryptoDeals</h1>
-            </Link>        
+            </div>        
             <form onSubmit={this.handleInputQuery}>
             <input 
               type="text" 
