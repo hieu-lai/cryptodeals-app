@@ -1,9 +1,9 @@
-// import zomato from 'zomato';
+const zomatoAuth = {
+  method: 'get',
+  headers: new Headers({
+    accept: 'application/json',
+    'user-key': process.env.ZOMATO_API_KEY 
+  })
+};
 
-// const config = {
-//   userKey: process.env.ZOMATO_API_KEY
-// };
-
-// const zomatoData = zomato.createClient(config);
-
-// export default zomatoData;
+export default zomatoAuth; 

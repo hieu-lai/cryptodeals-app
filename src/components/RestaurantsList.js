@@ -8,7 +8,7 @@ const RestaurantsList = (props) => (
     <h3>Restaurants list goes here</h3>
     {
       props.restaurants.map((restaurant) =>
-        <RestaurantListItem key={restaurant.name} {...restaurant} />)
+        <RestaurantListItem key={restaurant.id} {...restaurant} />)
     }
   </div>
 );
