@@ -10,6 +10,7 @@ import 'react-dates/lib/css/_datepicker.css';
 import { firebase } from './firebase/firebase';
 import LoadingPage from './components/LoadingPage';
 import { startSetRestaurants } from './actions/restaurants';
+import { startSetCryptocoins } from './actions/cryptocoins';
 
 const store = configureStore();
 const jsx = (
@@ -18,6 +19,7 @@ const jsx = (
   </Provider>
 );
 
+store.dispatch(startSetCryptocoins());
 store.dispatch(startSetRestaurants());
 
 ReactDOM.render(jsx, document.getElementById('app'));

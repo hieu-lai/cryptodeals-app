@@ -12,7 +12,6 @@ export const startSetRestaurants = () => {
       .once('value')
       .then((snapshot) => {
         const restaurants = [];
-        const coins = [];
 
         snapshot.forEach((childSnapshot) => {
           restaurants.push({
