@@ -61,20 +61,20 @@ class Header extends React.Component {
     return (
       <header className="header">
         <div className="content-container">
-          <div className="header__content">
-            
+          <div className="header__content">            
             <div className="header__title" onClick={this.handleClearSessionStorage}>
               <h1>CryptoDeals</h1>
             </div>        
-            <form onSubmit={this.handleInputQuery}>
+            <form className="form-input" onSubmit={this.handleInputQuery}>
             <input 
+              className="text-input__search"
               type="text" 
-              placeholder="Find deals"
-              name="query"
-              
+              placeholder="Find deals" 
+              name="query"              
             />
             </form>
             <select
+              className="select"
               value={this.state.sortByCity}
               onChange={this.handleSortByCity}  
             >

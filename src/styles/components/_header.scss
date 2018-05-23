@@ -1,10 +1,11 @@
 .header {
-  background: $dark-blue;
+  background: $orange;
 }
 
 .header__content {
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding: $s-size 0;
 }
@@ -13,7 +14,19 @@
   color: white;
   text-decoration: none;
   h1 {
+    font-size: $heading-large-size;
     margin: 0;
     cursor: pointer;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .header__content {
+    flex-direction: row;
+  }
+  .header__title {
+    h1{
+      margin: 0 $l-size 0 0;;
+    }
   }
 }
