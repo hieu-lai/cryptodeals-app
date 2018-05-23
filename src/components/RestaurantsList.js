@@ -6,14 +6,12 @@ import selectRestaurants from '../selectors/restaurants';
 const RestaurantsList = (props) => (
   <div>
     <h3>Restaurants list goes here</h3>
-    {console.log(props.coins)}
-    {console.log(props.restaurants)}
     {
       props.restaurants.map((restaurant) =>
         <RestaurantListItem 
           key={restaurant.id} 
           restaurant={restaurant} 
-          coins={props.coins} 
+          coins={props.coins}
         />
       )
     }

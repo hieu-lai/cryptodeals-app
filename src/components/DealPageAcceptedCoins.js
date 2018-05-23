@@ -1,19 +1,20 @@
 import React from 'react';
+import uuid from 'uuid';
 
-class DealPageAcceptedCoins extends React.Component {
-  constructor(props) {
-    super(props);
-  };
-  
-  render() {
-    return (
-      <div>
-        <h2>Accepted here</h2>
-        {Object.keys(this.props.coins).map((key) => <p key={key}>{key}</p>)}
-        {console.log(this.props)}
-      </div>
-    )
-  }
+const DealPageAcceptedCoins = ({ coins, dealCoins }) => {
+  let coinsAndLogos = coins.filter((coin) => Object.keys(dealCoins).includes(coin.coin));
+  return (
+    <div>
+      <h2>Accepted here:</h2>
+      {coinsAndLogos.map(coinAndlogo => 
+        <div key={uuid()}>
+          <img  src={coinAndlogo.logo} />
+          <p>{coinAndlogo.coin}</p>
+        </div>  
+      )}
+    </div>
+  );
+
 };
 
 export default DealPageAcceptedCoins;

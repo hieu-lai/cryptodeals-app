@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import numeral from 'numeral';
+import uuid from 'uuid';
 
 const RestaurantListItem = ({ restaurant, coins }) => {
   const preferCoins = [];
   const otherCoins = [];
-  console.log(coins);
   for (let key in restaurant.cryptocurrencies) {
     if (restaurant.cryptocurrencies[key] === 1) {
       preferCoins.push(key);
@@ -15,11 +15,18 @@ const RestaurantListItem = ({ restaurant, coins }) => {
   };
   const acceptedCoins = coins.filter((coin) => preferCoins.includes(coin.coin));
   let image = acceptedCoins.map((coin) => {
-    return <div><img key={coin.coin} src={coin.logo} /><p>{coin.coin}</p></div>
+    return (
+      <div key={uuid()}>
+        <img key={coin.coin} src={coin.logo} />
+        <p>{coin.coin}</p>
+      </div>
+    )
   });
+
   return (
     <div>
       <Link to={`/deal/${restaurant.id}`}>
+        <img src={restaurant.thumb} />
         <h4>{restaurant.tagline}</h4>
         <h5>{restaurant.name}</h5>
         <p>{restaurant.location.suburb.replace(/\b[a-z]/g, (letter) => letter.toUpperCase())}</p>
@@ -28,7 +35,7 @@ const RestaurantListItem = ({ restaurant, coins }) => {
         {image}
         {otherCoins.length > 0 ? <p>+ {otherCoins.length} more </p> : ''}
       </Link>
-    </div>
+    </div> 
   );
 };
 
