@@ -1,12 +1,18 @@
 .list-item__image {
-  border-radius: 6px;
-  height: 18rem;
+  border-radius: 6px 6px 0 0;
+  height: 20rem;
   object-fit: cover;
-  max-width: 100%;
+  width: 100%;
   min-width: 30rem;
 }  
 
 .list-item--link {
   color: $dark-grey;
   text-decoration: none;
+} 
+
+@media (min-width: $desktop-breakpoint) {
+  .list-item__image {
+    height: 18rem;
+  }  
 }
