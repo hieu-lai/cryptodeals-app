@@ -22,9 +22,23 @@
   padding-left: $l-size;
 }
 
+.text-input__email {
+  @extend .text-input;
+  vertical-align: middle;
+}
+
 .select {
   @extend .text-input;
   padding: $xs-size;
+}
+
+.select__location {
+  @extend .select;
+  background-image: url('/images/location-icon.png');
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  padding-left: $l-size;
 }
 
 .textarea {

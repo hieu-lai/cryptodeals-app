@@ -74,11 +74,11 @@ class Header extends React.Component {
             />
             </form>
             <select
-              className="select"
+              className="select__location"
               value={this.state.sortByCity}
               onChange={this.handleSortByCity}  
             >
-              {!this.state.sortByCity ? <option value="">Select region</option> : ""}
+              {!this.state.sortByCity ? <option value="">Location</option> : ""}
               <option value="Melbourne">Melbourne</option>
               <option value="Sydney">Sydney</option>
               <option value="Brisbane">Brisbane</option>

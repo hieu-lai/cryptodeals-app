@@ -1,19 +1,20 @@
 .button {
-  background: $blue;
+  background: $orange;
   border: none;
   color: white;
   display: inline-block;
   font-size: $font-size-large;
   font-weight: 300;
+  height: 3.9rem;
   line-height: 1;
+  margin: $m-size 0 0 $s-size;
   padding: $s-size;
   text-decoration: none;
+  vertical-align: middle;
 }
 
-.button--link {
-  background: none;
-}
-
-.button--secondary {
-  background: #888;
+@media (min-width: $desktop-breakpoint) {
+  .button {
+    margin: 0 0 0 $s-size;
+  }
 }

@@ -4,18 +4,19 @@ import RestaurantListItem from './RestaurantListItem';
 import selectRestaurants from '../selectors/restaurants';
 
 const RestaurantsList = (props) => (
-  <div>
-    <h3>Restaurants list goes here</h3>
-    {
-      props.restaurants.map((restaurant) =>
-        <RestaurantListItem 
-          key={restaurant.id} 
-          restaurant={restaurant} 
-          coins={props.coins}
-        />
-      )
-    }
-  </div>
+  <div className="content-container">  
+    <div className="list-content-container">
+      {
+        props.restaurants.map((restaurant) =>
+          <RestaurantListItem 
+            key={restaurant.id} 
+            restaurant={restaurant} 
+            coins={props.coins}
+          />
+        )
+      }
+    </div>
+  </div>  
 );
 
 

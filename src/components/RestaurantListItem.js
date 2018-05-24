@@ -17,16 +17,16 @@ const RestaurantListItem = ({ restaurant, coins }) => {
   let image = acceptedCoins.map((coin) => {
     return (
       <div key={uuid()}>
-        <img key={coin.coin} src={coin.logo} />
+        <img src={coin.logo} />
         <p>{coin.coin}</p>
       </div>
     )
   });
 
   return (
-    <div>
-      <Link to={`/deal/${restaurant.id}`}>
-        <img src={restaurant.thumb} />
+    <div className="item-container">
+      <Link className="list-item--link" to={`/deal/${restaurant.id}`}>
+        <img className="list-item__image" src={restaurant.thumb} />
         <h4>{restaurant.tagline}</h4>
         <h5>{restaurant.name}</h5>
         <p>{restaurant.location.suburb.replace(/\b[a-z]/g, (letter) => letter.toUpperCase())}</p>

@@ -3,3 +3,29 @@
   padding: 0 $m-size;
   max-width: 110rem;
 }
+
+.list-content-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: $l-size 0 0 0;
+}
+
+.item-container {
+  border: 1px solid $dark-grey;
+  margin: 0 $s-size;
+  width: 30.2rem;
+}
+
+// .item-container:nth-child(even) {
+//   margin: 0 8.1rem;
+// }
+
+@media (min-width: $desktop-breakpoint) {
+  .list-content-container {
+    align-items: unset;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

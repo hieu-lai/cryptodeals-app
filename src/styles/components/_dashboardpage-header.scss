@@ -1,0 +1,21 @@
+.dashboard-header__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .dashboard-header__content {
+    border-bottom: 2px solid $dark-grey;
+    flex-direction: row;
+    padding: $m-size 0 0 0;
+    h1 {
+      margin-bottom: 0;
+    }
+  }
+}
