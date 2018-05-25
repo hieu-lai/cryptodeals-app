@@ -1,6 +1,7 @@
 .footer {
   background: $light-grey;
   border-top: 2px solid darken($light-grey, 20%);
+  border-bottom: 2px solid darken($light-grey, 20%);
   margin: $xl-size 0 0 0;
   padding: $l-size 0;
   h4 {
@@ -36,6 +37,9 @@
 .footer-container__right {
   text-align: center;
   flex: 1;
+  p {
+    font-size: $font-size-small;
+  }
 }
 
 .footer__title {
@@ -54,6 +58,27 @@
   vertical-align: middle;
 }
 
+.footer-container__bottom {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer__icon {
+  height: 4.5rem;
+  justify-items: center;
+  margin: $s-size auto $xs-size auto;
+  width: auto;
+}
+
+.footer__signage {
+  font-size: $font-size-small;
+  font-weight: 540;
+  margin: $xs-size;
+  text-align: center;
+}
+
 @media (min-width: $desktop-breakpoint) {
   .footer-container {
     flex-direction: row;
@@ -69,6 +94,18 @@
   }
   .footer__title {
     text-align: unset;
+  }
+  .footer-container__bottom {
+    flex-direction: row;
+    position: relative;
+  }  
+  .footer__signage { 
+    bottom: 0;
+    font-size: $font-size-small;
+    font-weight: 540;
+    margin: $xs-size 0 0 0;
+    position: absolute;
+    right: 0;
   }
 }
 

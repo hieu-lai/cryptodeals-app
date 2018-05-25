@@ -63,6 +63,7 @@ class Header extends React.Component {
         <div className="content-container">
           <div className="header__content">            
             <div className="header__title" onClick={this.handleClearSessionStorage}>
+              <img className="header__icon" src="/images/icon_white.png" />
               <h1>CryptoDeals</h1>
             </div>        
             <form className="form-input" onSubmit={this.handleInputQuery}>

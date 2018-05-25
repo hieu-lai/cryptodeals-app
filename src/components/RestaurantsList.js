@@ -8,7 +8,6 @@ const RestaurantsList = (props) => {
   let fillTheGap = [];
   const fillTheGapFunc = () => {
     const numOfRest = props.restaurants.length;
-    //let fillTheGap;
     if (window.innerWidth >= 720 && window.innerWidth <= 1026 && numOfRest%2 !== 0) {
       fillTheGap = [<div key={uuid()} className="empty__div"></div>];
     } else if (window.innerWidth > 1026 && numOfRest%3-2 === 0) {
@@ -19,6 +18,7 @@ const RestaurantsList = (props) => {
     return fillTheGap;
   };  
   fillTheGapFunc();
+  
   return (
     <div className="content-container">  
       <div className="list-content-container">
