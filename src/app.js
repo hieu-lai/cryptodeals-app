@@ -19,21 +19,25 @@ const jsx = (
   </Provider>
 );
 
+// store.dispatch(startSetCryptocoins());
+// store.dispatch(startSetRestaurants());
+
+// ReactDOM.render(jsx, document.getElementById('app'));
+
+let hasRendered = false;
+const renderApp = () => {
+  if (!hasRendered) {
+    ReactDOM.render(jsx, document.getElementById('app'));
+    hasRendered = true;
+  }
+};
+
+ReactDOM.render(<LoadingPage />, document.getElementById('app'));
+
 store.dispatch(startSetCryptocoins());
-store.dispatch(startSetRestaurants());
-
-ReactDOM.render(jsx, document.getElementById('app'));
-
-// let hasRendered = false;
-// const renderApp = () => {
-//   if (!hasRendered) {
-//     ReactDOM.render(jsx, document.getElementById('app'));
-//     hasRendered = true;
-//   }
-// };
-
-// ReactDOM.render(<LoadingPage />, document.getElementById('app'));
-
+store.dispatch(startSetRestaurants()).then(() => {
+  renderApp();
+});
 
 
 // firebase.auth().onAuthStateChanged((user) => {

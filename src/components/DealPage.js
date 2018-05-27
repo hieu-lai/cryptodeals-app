@@ -11,14 +11,13 @@ class DealPage extends React.Component {
   render() {
     return (
       <div>
-        {
-          this.props.restaurant ? 
+        
+           
           <DealPageCombined 
             restaurant={this.props.restaurant}
             coins={this.props.coins} 
           />
-          : <LoadingPage />
-        }
+        
 
       </div>
     );
