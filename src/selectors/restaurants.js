@@ -1,6 +1,7 @@
 const selectRestaurants = (restaurants, { text, sortByCity, sortBy }) => {
   return restaurants.filter((restaurant) => {
-    const textMatch = restaurant.tagline.toLowerCase().includes(text.toLowerCase());
+    const textMatch = restaurant.tagline.toLowerCase().includes(text.toLowerCase()) ||
+                      restaurant.location.suburb.toLowerCase().includes(text.toLowerCase());
     const cityMatch = restaurant.location.city.includes(sortByCity.toLowerCase());
 
     return textMatch && cityMatch;

@@ -4,7 +4,6 @@ import RestaurantsList from './RestaurantsList';
 
 const DashboardPage = () => (
   <div>
-    {console.log(process.env.FIREBASE_MESSAGING_SENDER_ID)}
     <DashboardPageHeader />
     <RestaurantsList />
   </div>

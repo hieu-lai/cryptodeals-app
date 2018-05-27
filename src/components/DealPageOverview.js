@@ -9,7 +9,8 @@ class DealPageOverview extends React.Component {
       error: null,
       data: [],
       location: [],
-      zomatoID: props.zomato_id
+      zomatoID: props.zomato_id,
+      phone: props.phone
     };
   };
 
@@ -35,14 +36,16 @@ class DealPageOverview extends React.Component {
       <div className="content-container">
         <div className="dealpage-container-info">
           <h2 className="dealpage__subtitle">Overview</h2>
-          <h4>Phone Number</h4>
-          <h4>Cuisines</h4>
-          <p>{this.state.data.cuisines}</p>
-          <h4>Average Cost</h4>
-          <p>{`$${this.state.data.average_cost_for_two} for two people`}</p>
-          <h4>Address</h4>
-          <p>{this.state.location.address}</p>
-          <h3>{console.log(this.state.data)}</h3>
+          <div className="overview-container">
+            <h4>Phone Number</h4>
+            <p className="overview__phone">{this.state.phone}</p>
+            <h4>Cuisines</h4>
+            <p>{this.state.data.cuisines}</p>
+            <h4>Average Cost</h4>
+            <p>{`$${this.state.data.average_cost_for_two} for two people`}</p>
+            <h4>Address</h4>
+            <p>{this.state.location.address}</p>
+          </div>  
         </div>  
       </div> 
     );

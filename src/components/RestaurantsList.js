@@ -22,6 +22,7 @@ const RestaurantsList = (props) => {
   return (
     <div className="content-container">  
       <div className="list-content-container">
+        {props.restaurants.length === 0 ? <p className="list__nomatch">Sorry, no matching deals found.</p> : ''}
         {
           props.restaurants.map((restaurant) =>
             <RestaurantListItem 

@@ -44,6 +44,10 @@
   }
 }
 
+.list__nomatch {
+  font-style: italic;
+}
+
 .list-item--link {
   color: $dark-grey;
   text-decoration: none;

@@ -12,7 +12,10 @@ const DealPageCombined = (props) => (
       dealCoins={props.restaurant.cryptocurrencies} 
       coins={props.coins}
     />
-    <DealPageOverview zomato_id={props.restaurant.zomato_id} />
+    <DealPageOverview 
+      phone={props.restaurant.phone}
+      zomato_id={props.restaurant.zomato_id} 
+    />
   </div>  
 );
 
