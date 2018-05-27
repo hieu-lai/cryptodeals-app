@@ -32,16 +32,18 @@ class DealPageOverview extends React.Component {
   
   render() {
     return (
-      <div>
-        <h2>Overview</h2>
-        <h4>Phone Number</h4>
-        <h4>Cuisines</h4>
-        <p>{this.state.data.cuisines}</p>
-        <h4>Average Cost</h4>
-        <p>{`$${this.state.data.average_cost_for_two} for two people`}</p>
-        <h4>Address</h4>
-        <p>{this.state.location.address}</p>
-        <h3>{console.log(this.state.data)}</h3>
+      <div className="content-container">
+        <div className="dealpage-container-info">
+          <h2 className="dealpage__subtitle">Overview</h2>
+          <h4>Phone Number</h4>
+          <h4>Cuisines</h4>
+          <p>{this.state.data.cuisines}</p>
+          <h4>Average Cost</h4>
+          <p>{`$${this.state.data.average_cost_for_two} for two people`}</p>
+          <h4>Address</h4>
+          <p>{this.state.location.address}</p>
+          <h3>{console.log(this.state.data)}</h3>
+        </div>  
       </div> 
     );
   };

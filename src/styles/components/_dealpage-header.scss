@@ -1,0 +1,13 @@
+.dealpage-header__title {
+  font-size: $heading-small-size;
+}
+
+.dealpage-header__subtitle {
+  margin: $s-size 0;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .dealpage-header__title {
+    font-size: $heading-medium-size;
+  }
+}

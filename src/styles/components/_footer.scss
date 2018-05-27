@@ -42,6 +42,14 @@
   }
 }
 
+.footer-container__followUs {
+  li {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .footer__title {
   color: $orange;
   font-size: $heading-medium-size;
@@ -66,14 +74,14 @@
 }
 
 .footer__icon {
-  height: 4.5rem;
+  height: 4rem;
   justify-items: center;
-  margin: $s-size auto $xs-size auto;
+  margin: $xs-size auto 0 auto;
   width: auto;
 }
 
 .footer__signage {
-  font-size: $font-size-small;
+  font-size: 1.2rem;
   font-weight: 540;
   margin: $xs-size;
   text-align: center;
@@ -92,13 +100,22 @@
     text-align: right;
     flex: 1;
   }
+  .footer-container__followUs {
+    li {
+      justify-content: unset;
+    }
+  }  
   .footer__title {
     text-align: unset;
   }
   .footer-container__bottom {
     flex-direction: row;
     position: relative;
-  }  
+  } 
+  .footer__icon {
+    height: 4.5rem;
+    margin: $xs-size auto;
+  }   
   .footer__signage { 
     bottom: 0;
     font-size: $font-size-small;

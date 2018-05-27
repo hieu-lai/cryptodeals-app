@@ -12,11 +12,20 @@
   padding: $l-size 0 0 0;
 }
 
+.dealpage-container-info {
+  margin: $s-size 0 0 0;
+}
+
 @media (min-width: $desktop-breakpoint) {
   .list-content-container {
     align-items: unset;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .dealpage-container-info {
+    border-top: 1px solid darken($light-grey, 5%);
+    margin: $s-size 0 $l-size 0;
+    width: 62.4%;
   }
 } 
 

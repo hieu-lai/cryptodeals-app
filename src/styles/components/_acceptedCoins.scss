@@ -1,0 +1,22 @@
+.acceptedCoins-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.coin-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  margin: 0 $l-size $l-size 0;
+  width: 13rem;
+}
+
+.coin__logo {
+  height: 32px;
+}
+
+.coin__name {
+  font-weight: 500;
+  margin: 0 0 0 $xs-size;
+}

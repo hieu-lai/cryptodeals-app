@@ -1,8 +1,8 @@
 import React from 'react';
 
 const DealPageHeader = ({ tagline }) => (
-  <div>
-    <h3>{tagline}</h3>
+  <div className="content-container" >
+    <h1 className="dealpage-header__title">{tagline}</h1>
   </div>
 );
 

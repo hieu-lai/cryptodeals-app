@@ -7,10 +7,14 @@
   font-weight: 300;
   height: 3.9rem;
   line-height: 1;
-  margin: $m-size 0 0 $s-size;
   padding: $s-size;
   text-decoration: none;
   vertical-align: middle;
+}
+
+.button__email {
+  @extend .button;  
+  margin: $m-size 0 0 0;
 }
 
 @media (min-width: $desktop-breakpoint) {

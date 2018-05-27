@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FacebookIcon from 'react-icons/lib/fa/facebook-square';
+import TwitterIcon from 'react-icons/lib/fa/twitter-square';
 
 const Footer = () => (
   <div>
@@ -16,18 +18,30 @@ const Footer = () => (
               </ul> 
             </div>  
             <div>
-              <h4>Help & Support</h4>
+              <h4>Help & Support</h4> 
               <ul>
                 <li>Contact Us</li>
                 <Link className="footer--link" to="/terms-and-conditions" target="_blank"><li>Terms & Conditions</li></Link>
                 <Link className="footer--link" to='/privacy-policy' target="_blank"><li>Privacy Policy</li></Link>
               </ul> 
             </div>
-            <div>
+            <div className="footer-container__followUs">
               <h4>Follow Us</h4>
               <ul>
-                <li>Facebook</li>
-                <li>Twitter</li>
+                <li>
+                  <a className="footer--link" href="http://www.facebook.com" target="_blank">
+                    <FacebookIcon 
+                      size={23}
+                    /> Facebook
+                  </a>
+                </li>
+                <li>
+                  <a className="footer--link" href="http://www.twitter.com" target="_blank">
+                    <TwitterIcon 
+                      size={23}
+                    /> Twitter
+                  </a>  
+                </li>
               </ul> 
             </div>
           </div>  
@@ -38,7 +52,7 @@ const Footer = () => (
               <p>Get the latest updates and news.</p>
               <form className="footer--form">
                 <input className="text-input__email" placeholder="email" />
-                <button className="button">Submit</button>
+                <button className="button__email">Submit</button>
               </form>  
             </div>
           </div>  
