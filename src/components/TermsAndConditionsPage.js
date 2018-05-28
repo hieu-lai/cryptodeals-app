@@ -1,7 +1,11 @@
+/*
+ * Renders T's and C's page.
+*/
+
 import React from 'react';
 
 const TermsAndConditionsPage = () => (
-  <div>
+  <div className="content-container">
     <h3>Terms and Conditions</h3>
     <p>
       *OVERVIEW*

@@ -1,9 +1,14 @@
+/*
+ * Renders each deal on the main page.
+*/
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import numeral from 'numeral';
 import uuid from 'uuid';
 
 const RestaurantListItem = ({ restaurant, coins }) => {
+  // Splits the prefered coins and other coins into diff arrays.
   const preferCoins = [];
   const otherCoins = [];
   for (let key in restaurant.cryptocurrencies) {
@@ -13,6 +18,7 @@ const RestaurantListItem = ({ restaurant, coins }) => {
       otherCoins.push(key);
     }
   };
+  // Finds the correct logo for each prefered coin.
   const acceptedCoins = coins.filter((coin) => preferCoins.includes(coin.coin));
   let image = acceptedCoins.map((coin) => {
     return (

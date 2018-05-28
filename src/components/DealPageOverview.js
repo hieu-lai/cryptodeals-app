@@ -1,3 +1,7 @@
+/*
+ * Renders the overview info of that particualr restaurant.
+*/
+
 import React from 'react';
 import zomatoAuth from '../zomato/zomato';
 
@@ -15,7 +19,7 @@ class DealPageOverview extends React.Component {
   };
 
   componentDidMount() {
-    
+    // Fetch data from Zomato API
     fetch(`https://developers.zomato.com/api/v2.1/restaurant?res_id=${this.state.zomatoID}`, zomatoAuth)
       .then(res => res.json())
       .then(

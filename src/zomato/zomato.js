@@ -1,3 +1,7 @@
+/*
+ * Zomato Authorization
+*/
+
 const zomatoAuth = {
   method: 'get',
   headers: new Headers({

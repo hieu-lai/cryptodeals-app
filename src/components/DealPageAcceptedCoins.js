@@ -1,3 +1,8 @@
+/*
+ * Renders the component that shows all coins accepted by that particular
+ * restaurant.
+*/
+
 import React from 'react';
 import uuid from 'uuid';
 

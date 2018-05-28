@@ -1,3 +1,7 @@
+/*
+ * Render About Us page
+*/
+
 import React from 'react';
 
 class AboutUsPage extends React.Component {

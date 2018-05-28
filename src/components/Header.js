@@ -1,3 +1,8 @@
+/*
+ * Renders the top component that includes search bar and select option that 
+ * filter by city.
+*/
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';

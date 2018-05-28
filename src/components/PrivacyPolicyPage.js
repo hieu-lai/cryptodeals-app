@@ -1,7 +1,11 @@
+/*
+ * Renders privacy policy page
+*/
+
 import React from 'react';
 
 const PrivacyPolicyPage = () => (
-  <div>
+  <div className="content-container">
     <h3>Privacy Policy</h3>
     <p>
       *SECTION 1 - WHAT DO WE DO WITH YOUR INFORMATION?*

@@ -1,3 +1,7 @@
+/*
+ * Renders loading gif.
+*/ 
+
 import React from 'react';
 
 const LoadingPage = () => (

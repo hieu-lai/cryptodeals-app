@@ -1,3 +1,7 @@
+/*
+ *Action that fetch coin data from firebase and dispact to redux store.
+*/
+
 import database from '../firebase/firebase';
 
 // SET_CRYPTOCOINS

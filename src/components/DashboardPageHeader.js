@@ -1,3 +1,7 @@
+/*
+ * Render main page header with filters eg sort by discount
+*/
+
 import React from 'react';
 import { connect } from 'react-redux';
 import { sortByDate, sortByDiscount, sortByRecommendation } from '../actions/filters';

@@ -1,3 +1,7 @@
+/*
+ * Renders the tagline from that particular restaurant.
+*/
+
 import React from 'react';
 
 const DealPageHeader = ({ tagline }) => (

@@ -1,3 +1,7 @@
+/*
+ * Coin Reducer
+*/
+
 const cryptocoinsReducerDefaultState = [];
 
 const cryptocoinsReducer = (state = cryptocoinsReducerDefaultState, action) => {

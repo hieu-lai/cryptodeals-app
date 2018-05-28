@@ -1,3 +1,7 @@
+/*
+ * Render main page with deals
+*/
+
 import React from 'react';
 import DashboardPageHeader from './DashboardPageHeader';
 import RestaurantsList from './RestaurantsList';

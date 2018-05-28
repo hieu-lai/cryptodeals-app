@@ -1,3 +1,7 @@
+/*
+ * Renders the image and discount offered by that particular restaurant.
+*/
+
 import React from 'react';
 
 const DealPageCoupon = ({ restaurant }) => (

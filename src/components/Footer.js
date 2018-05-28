@@ -1,3 +1,8 @@
+/*
+ * Renders the footer of each page. Contains links to diff pages and outside 
+ * links to social media.
+*/
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import FacebookIcon from 'react-icons/lib/fa/facebook-square';

@@ -1,3 +1,8 @@
+/*
+ * Pass data through to the RestaurantListItem component. Also calculate
+ * screen width to create better responsive design.
+*/
+
 import React from 'react';
 import { connect } from 'react-redux';
 import RestaurantListItem from './RestaurantListItem';
@@ -5,6 +10,7 @@ import selectRestaurants from '../selectors/restaurants';
 import uuid from 'uuid';
 
 const RestaurantsList = (props) => {
+  // Calculates screen width and fills in the gaps.
   let fillTheGap = [];
   const fillTheGapFunc = () => {
     const numOfRest = props.restaurants.length;
