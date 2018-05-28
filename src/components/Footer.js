@@ -5,6 +5,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import FooterSubscription from './FooterSubscription';
 import FacebookIcon from 'react-icons/lib/fa/facebook-square';
 import TwitterIcon from 'react-icons/lib/fa/twitter-square';
 
@@ -52,14 +53,7 @@ const Footer = () => (
           </div>  
         
           <div className="footer-container__right">
-            <div>
-              <h3>Stay In Touch</h3>
-              <p>Get the latest updates and news.</p>
-              <form className="footer--form">
-                <input className="text-input__email" placeholder="email" />
-                <button className="button__email">Submit</button>
-              </form>  
-            </div>
+            <FooterSubscription />            
           </div>  
         </div>  
       </div>  

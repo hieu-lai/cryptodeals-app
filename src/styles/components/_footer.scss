@@ -63,7 +63,13 @@
 }
 
 .footer--form {
+  display: inline-block;
   vertical-align: middle;
+}
+
+.footer__email-error {
+  font-style: italic;
+  text-align: center;
 }
 
 .footer-container__bottom {
@@ -108,6 +114,9 @@
   .footer__title {
     text-align: unset;
   }
+  .footer__email-error {
+    text-align: left;
+  } 
   .footer-container__bottom {
     flex-direction: row;
     position: relative;

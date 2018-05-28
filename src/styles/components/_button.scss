@@ -17,8 +17,12 @@
   margin: $m-size 0 0 0;
 }
 
+.button__modal {
+  @extend .button;
+}
+
 @media (min-width: $desktop-breakpoint) {
-  .button {
+  .button__email {
     margin: 0 0 0 $s-size;
   }
 }
