@@ -17,6 +17,7 @@ import TermsAndConditionsPage from '../components/TermsAndConditionsPage';
 import PrivacyPolicyPage from '../components/PrivacyPolicyPage';
 import DealPage from '../components/DealPage';
 import Partnership from '../components/Partnership';
+import ContactUsPage from '../components/ContactUsPage';
 
 export const history = createHistory();
 
@@ -31,6 +32,7 @@ const AppRouter = () => (
         <PublicRoute path="/privacy-policy" component={PrivacyPolicyPage} />
         <PublicRoute path="/deal/:id" component={DealPage} />
         <PublicRoute path="/partner-up" component={Partnership} />
+        <PublicRoute path="/contact-us" component={ContactUsPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />

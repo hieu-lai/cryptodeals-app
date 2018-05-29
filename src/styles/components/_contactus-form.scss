@@ -1,0 +1,21 @@
+.contactus-form {
+  @extend .partnership-form;
+  h3 {
+    font-size: $font-size-small;
+  }
+}
+
+.contactus-form-textbox {
+  border: 1px solid #cacccd;
+  border-radius: 4px;
+  height: 15rem;
+  margin-top: $xs-size;
+  padding: $s-size;
+  resize: vertical;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .contactus-form__subtitle {
+    margin: 0 0 $l-size 0;
+  }  
+}

@@ -1,0 +1,41 @@
+.contactus-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactus__title {
+  font-size: $heading-large-size;
+  text-align: center;
+}
+
+.contactus__subtitle {
+  margin: 0;
+  text-align: center;  
+}
+
+.contactus__subtitle-below {
+  font-size: $font-size-small;
+  margin: 0 0 $s-size 0;
+  text-align: center;
+}
+
+.contactus-container--center {
+  margin-top: $l-size;
+  text-align: center;
+}
+
+
+@media (min-width: $desktop-breakpoint) {
+  .contactus-container {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 80rem;
+  }
+  .contactus-container-split {
+    flex: 1;
+  }
+  .contactus-container--center {
+    margin-top: 0;
+  }
+}

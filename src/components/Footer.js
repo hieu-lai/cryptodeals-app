@@ -26,7 +26,7 @@ const Footer = () => (
             <div>
               <h4>Help & Support</h4> 
               <ul>
-                <li>Contact Us</li>
+                <Link className="footer--link" to="/contact-us"><li>Contact Us</li></Link>
                 <Link className="footer--link" to="/terms-and-conditions" target="_blank"><li>Terms & Conditions</li></Link>
                 <Link className="footer--link" to='/privacy-policy' target="_blank"><li>Privacy Policy</li></Link>
               </ul> 

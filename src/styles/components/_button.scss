@@ -27,6 +27,10 @@
   margin-top: $m-size;
 }
 
+.button__contactus {
+  @extend .button__partnership;
+}
+
 @media (min-width: $desktop-breakpoint) {
   .button__email {
     margin: 0 0 0 $s-size;
@@ -36,4 +40,7 @@
     height: auto;
     margin-top: $xl-size;
   }  
+  .button__contactus {
+    font-size: $heading-small-size;
+  }
 }
