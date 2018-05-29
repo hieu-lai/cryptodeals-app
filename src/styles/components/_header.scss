@@ -7,7 +7,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: $s-size 0;
+  padding: 0 0 $s-size 0;
+}
+
+.header__superscript {
+  color: white;
+  margin: 0;
+  padding-top: $xs-size;
+  text-align: right;
+}
+
+.header--link {
+  text-decoration: none;
 }
 
 .header__title {

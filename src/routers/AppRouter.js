@@ -16,7 +16,7 @@ import AboutUsPage from '../components/AboutUsPage';
 import TermsAndConditionsPage from '../components/TermsAndConditionsPage';
 import PrivacyPolicyPage from '../components/PrivacyPolicyPage';
 import DealPage from '../components/DealPage';
-
+import Partnership from '../components/Partnership';
 
 export const history = createHistory();
 
@@ -30,6 +30,7 @@ const AppRouter = () => (
         <PublicRoute path="/terms-and-conditions" component={TermsAndConditionsPage} />
         <PublicRoute path="/privacy-policy" component={PrivacyPolicyPage} />
         <PublicRoute path="/deal/:id" component={DealPage} />
+        <PublicRoute path="/partner-up" component={Partnership} />
         <Route component={NotFoundPage} />
       </Switch>
       <Footer />

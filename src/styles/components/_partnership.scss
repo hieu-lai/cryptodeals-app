@@ -1,0 +1,55 @@
+.partnership-input {
+  border: 1px solid #cacccd;
+  border-radius: 4px;
+  height: 40px;
+  font-size: $font-size-large;
+  font-weight: 300;
+  margin-top: $xs-size;
+  padding: $s-size; 
+  width: 100%;
+}
+
+.partnership-form {
+  display: flex;
+  flex-direction: column;
+  input {
+    @extend .partnership-input;
+  }
+  h3 {
+    font-size: $font-size-large;
+    margin-bottom: 0;
+  }
+  p {
+    font-size: $font-size-small;
+    margin: 0 0 $s-size 0;
+    span {
+      font-style: italic;
+    }
+  }
+}
+
+.partnership__title {
+  font-size: $heading-small-size;
+  text-align: center;
+}
+
+@media (min-width: $desktop-breakpoint) {
+  .partnership-form {
+    margin: 0 auto;
+    max-width: 70rem;
+  }  
+  .partnership__title {
+    font-size: $heading-large-size;
+  }
+  .partnership-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    div {
+      flex: 1;
+    }
+  }
+  .partnership-empty-div {
+    max-width: 5rem;
+  }
+}

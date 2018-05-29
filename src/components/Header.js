@@ -31,7 +31,7 @@ class Header extends React.Component {
     sessionStorage.clear();
     window.location.assign('/');
   };
-
+  // Store data to local and session storage.
   componentDidMount() {
     try {
       const json1 = localStorage.getItem('sortByCity');
@@ -50,7 +50,7 @@ class Header extends React.Component {
       // Do nothing
     }
   };
-
+  // Check if there is data in local and session storage.
   componentDidUpdate(prevProps, prevState) {
     if(prevState.sortByCity !== this.state.sortByCity) {
       const json1 = JSON.stringify(this.state.sortByCity);
@@ -66,6 +66,7 @@ class Header extends React.Component {
     return (
       <header className="header">
         <div className="content-container">
+          <Link className="header--link" to="/partner-up"><h5 className="header__superscript">Advertise</h5></Link>
           <div className="header__content">            
             <div className="header__title" onClick={this.handleClearSessionStorage}>
               <img className="header__icon" src="/images/icon_white.png" />

@@ -1,12 +1,14 @@
 import React from 'react';
 import validator from 'validator';
-import EmailModal from './EmailModal';
+import ConfirmModal from './ConfirmModal';
 
 class FooterSubscription extends React.Component {
   state = {
     email: '',
     error: '',
-    isValid: false
+    isValid: false,
+    modalTitle: 'Thank You!',
+    modalSubtitle: "You'll receive the latest deals and news without lifting a finger. Happy trading!"
   };
 
   handleOnSubmit = (e) => {
@@ -49,7 +51,9 @@ class FooterSubscription extends React.Component {
           <button className="button__email">Submit</button>
           {this.state.error ? <p className="footer__email-error">{this.state.error}</p> : ''}
         </form>
-        <EmailModal 
+        <ConfirmModal 
+          modalTitle={this.state.modalTitle}
+          modalSubtitle={this.state.modalSubtitle}
           isValid={this.state.isValid}
           handleCloseModal={this.handleCloseModal}
         />  

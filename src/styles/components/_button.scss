@@ -21,8 +21,19 @@
   @extend .button;
 }
 
+.button__partnership {
+  @extend .button;
+  background: $blue;
+  margin-top: $m-size;
+}
+
 @media (min-width: $desktop-breakpoint) {
   .button__email {
     margin: 0 0 0 $s-size;
   }
+  .button__partnership {
+    font-size: $heading-medium-size;
+    height: auto;
+    margin-top: $xl-size;
+  }  
 }
