@@ -2,7 +2,7 @@
   "name": "cryptodeals-app",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Andrew Mead",
+  "author": "Hieu",
   "license": "MIT",
   "scripts": {
     "build:dev": "webpack",

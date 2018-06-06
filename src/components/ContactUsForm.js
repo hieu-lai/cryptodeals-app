@@ -1,3 +1,7 @@
+/*
+ * Renders the form on Contact us page
+*/
+
 import React from 'react';
 import validator from 'validator';
 import ConfirmModal from './ConfirmModal';

@@ -1,3 +1,7 @@
+/*
+ * Combines ContactUsForm and ContactUsLink components.
+*/
+
 import React from 'react';
 import ContactUsForm from './ContactUsForm';
 import ContactUsLinks from './ContactUsLinks';

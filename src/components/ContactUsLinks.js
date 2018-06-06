@@ -1,3 +1,7 @@
+/*
+ * Renders all the links on ContactUs page.
+*/
+
 import React from 'react';
 import FacebookIcon from 'react-icons/lib/fa/facebook-square';
 import TwitterIcon from 'react-icons/lib/fa/twitter-square';
